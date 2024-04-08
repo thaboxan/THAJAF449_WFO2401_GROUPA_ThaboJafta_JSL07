@@ -15,10 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 🚨 Get input values
     const studentNameInput = document.getElementById("studentName");
-    const personalMessageInput =
-      document.getElementById("personalMessage").value;
-    const courseNameInput =
-      document.getElementById("courseName").value || "a course"; // Fallback to "a course" if no input;
+    const personalMessageInput = document.getElementById("personalMessage");
+    const courseNameInput = document.getElementById("courseName") || "a course"; // Fallback to "a course" if no input;
 
     const studentName = studentNameInput.value;
     const personalMessage = personalMessageInput.value;
@@ -47,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear the form inputs
     studentNameInput.value = "";
     personalMessageInput.value = "";
-    if (courseNameInput) courseNameInput.value = "";
+    courseNameInput.value = "";
   });
 
   //  🚨 Close the modal when the close button is clicked
